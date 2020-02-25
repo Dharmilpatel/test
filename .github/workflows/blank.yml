@@ -9,5 +9,5 @@ jobs:
 
     - uses: actions/checkout@v1
     - uses: WebFreak001/setup-dmd@v1
-    with:
-      dmd-version: 2.088.0
+      with:
+        dmd-version: 2.088.0
