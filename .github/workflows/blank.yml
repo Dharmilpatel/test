@@ -11,3 +11,18 @@ jobs:
     - uses: WebFreak001/setup-dmd@v1
       with:
         dmd-version: 2.088.0
+
+  compile:
+    needs: build
+    name: Compile
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Print a greeting
+      env:
+        MY_VAR: Hi there! My name is
+        FIRST_NAME: Mona
+        MIDDLE_NAME: The
+        LAST_NAME: Octocat
+      run: |
+        echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
