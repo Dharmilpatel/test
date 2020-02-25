@@ -1,3 +1,5 @@
-#!/bin/bash
+#!/bin/sh -l
 
-rdmd hello.d
+echo "Hello $1"
+time=$(date)
+echo ::set-output name=time::$time
