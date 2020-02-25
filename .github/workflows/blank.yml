@@ -16,6 +16,7 @@ jobs:
     needs: build
     name: Compile
     runs-on: ubuntu-latest
+    shell: bash
     steps:
 
     - name: Compiling
