@@ -20,4 +20,4 @@ jobs:
 
     - name: Compiling
       run: |
-        pwd
+        ls
