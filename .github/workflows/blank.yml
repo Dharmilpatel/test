@@ -21,4 +21,4 @@ jobs:
     - name: Compiling
       shell: bash
       run: |
-        locate hello.d
+        git branch
