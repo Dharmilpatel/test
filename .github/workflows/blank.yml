@@ -20,4 +20,4 @@ jobs:
 
     - name: Compiling
       run: |
-        dmd hello.d
+        ./script.sh
