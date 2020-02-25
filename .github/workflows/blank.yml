@@ -1,25 +1,50 @@
-name: dmd
 on: [push]
+
 jobs:
-
-  build:
-    name: Build
+  hello_world_job:
     runs-on: ubuntu-latest
+    name: A job to say hello
     steps:
-
-    - uses: actions/checkout@v1
-    - uses: mihails-strasuns/setup-dlang@v0.3.0
+    - name: Hello world action step
+      id: hello
+      uses: actions/test_actions@v1
       with:
-        dmd-version: 2.088.0
+        who-to-greet: 'Mona the Octocat'
+    # Use the output from the `hello` step
+    - name: Get the output time
+      run: echo "The time was ${{ steps.hello.outputs.time }}"
 
-  compile:
-    needs: build
-    name: Compile
-    runs-on: ubuntu-latest
-    steps:
 
-    - name: Compiling
-      shell: bash
-      run: |
-        cd ..
-        git branch
+
+
+
+
+
+
+
+
+# name: dmd
+# on: [push]
+# jobs:
+
+#   build:
+#     name: Build
+#     runs-on: ubuntu-latest
+#     steps:
+
+#     - uses: actions/checkout@v1
+#     - uses: mihails-strasuns/setup-dlang@v0.3.0
+#       with:
+#         dmd-version: 2.088.0
+
+#   compile:
+#     needs: build
+#     name: Compile
+#     runs-on: ubuntu-latest
+#     steps:
+
+#     - name: Compiling
+#       shell: bash
+#       run: |
+#         cd ..
+#         git branch
