@@ -7,26 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - name: Set up dmd 2.090.0
     - uses: actions/checkout@v1
     - uses: WebFreak001/setup-dmd@v1
-      with:
-        dmd-version: 2.088.0
-      id: dmd
-
-    - name: Check out code into the Go module directory
-      uses: actions/checkout@v1
-
-    # - name: Get dependencies
-    #   run: |
-    #     go get -v -t -d ./...
-    #     if [ -f Gopkg.toml ]; then
-    #       curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
-    #       dep ensure
-    #     fi
-
-    # - name: Greeting
-    #   run: go run run.go
-
-    # - name: Build
-    #   run: go build -v .
+    with:
+      dmd-version: 2.088.0
