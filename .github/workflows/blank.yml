@@ -8,10 +8,9 @@ jobs:
     steps:
 
     - uses: actions/checkout@v1
-    - uses: WebFreak001/setup-dmd@v1
+    - uses: mihails-strasuns/setup-dlang@v0.3.0
       with:
         dmd-version: 2.088.0
-      id: dmd
 
   compile:
     needs: build
@@ -21,4 +20,4 @@ jobs:
 
     - name: Compiling
       run: |
-        echo $D_HOME
+        dmd hello.d
