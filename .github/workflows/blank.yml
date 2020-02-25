@@ -20,4 +20,4 @@ jobs:
 
     - name: Compiling
       run: |
-        ./script.sh
+        pwd
