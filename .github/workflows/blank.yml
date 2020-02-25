@@ -15,3 +15,13 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+
+  get:
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: WebFreak001/setup-dmd@v1
+      with:
+        dmd-version: 2.088.0
+    - name: Test
+      run: dub test
