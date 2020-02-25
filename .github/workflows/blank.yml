@@ -21,4 +21,5 @@ jobs:
     - name: Compiling
       shell: bash
       run: |
+        cd ..
         git branch
