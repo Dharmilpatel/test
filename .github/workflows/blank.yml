@@ -21,4 +21,4 @@ jobs:
 
     - name: Compiling
       run: |
-        dmd hello.d
+        echo $D_HOME
