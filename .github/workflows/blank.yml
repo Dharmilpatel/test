@@ -8,9 +8,10 @@ jobs:
     steps:
 
     - name: Set up dmd 2.090.0
-      uses: actions/setup-dmd@v1
+      uses: actions/checkout@v1
+      uses: WebFreak001/setup-dmd@v1
       with:
-        dmd-version: 2.090.0
+        dmd-version: 2.088.0
       id: dmd
 
     - name: Check out code into the Go module directory
