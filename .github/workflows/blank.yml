@@ -1,4 +1,4 @@
-name: dmd
+name: Build
 on: [push]
 jobs:
 
