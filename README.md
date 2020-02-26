@@ -1,3 +1,3 @@
 # test_actions
 
-![](https://github.com/actions/hello-world/workflows/Greet%20Everyone/badge.svg)
+![](https://github.com/Dharmilpatel/test_actions/workflows/Greet%20Everyone/badge.svg)
