@@ -1,5 +1,5 @@
 name: build_when_pull_req
-on: [pull_req]
+on: [pull_request]
 jobs:
 
   build:
