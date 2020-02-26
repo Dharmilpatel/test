@@ -8,5 +8,5 @@ string func1(string b)
 unittest
 {
 	writeln("In program 1:");
-	assert(func1("Heyy") == "Heyy");
+	assert(func1("Heyy") == "Hey");
 }
