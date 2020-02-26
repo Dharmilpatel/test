@@ -8,10 +8,10 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v1
-    # - name: Setup dmd  
-    #   uses: mihails-strasuns/setup-dlang@v0.3.0
-    #   with:
-    #     dmd-version: 2.088.0
+    - name: Setup dmd  
+      uses: mihails-strasuns/setup-dlang@v0.3.0
+      with:
+        dmd-version: 2.088.0
     - name: Moving build to artifacts directory
       run: |
         chmod +x ./script.sh
