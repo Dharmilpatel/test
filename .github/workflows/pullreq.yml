@@ -1,0 +1,30 @@
+name: build_when_pull_req
+on: [pull_req]
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Setup dmd  
+      uses: mihails-strasuns/setup-dlang@v0.3.0
+      with:
+        dmd-version: 2.088.0
+    - name: Moving build to artifacts directory
+      run: |
+        chmod +x ./script.sh
+        ./script.sh
+
+  # compile:
+  #   needs: build
+  #   name: Compile
+  #   runs-on: ubuntu-latest
+  #   steps:
+
+  #   - name: Compiling
+  #     shell: bash
+  #     run: |
+  #       cd ..
+  #       git branch
