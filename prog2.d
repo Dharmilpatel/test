@@ -50,7 +50,7 @@ struct s
 		string path = "./" ~ tempFileSo;
 		libhandle = dlopen(cast (char *)path, RTLD_LAZY | RTLD_LOCAL);
 		import std.stdio;
-		writeln(path);
+		//writeln(path);
 		if (libhandle is null)
 			throw new Exception("Could not find the so file:\n");
 	}
