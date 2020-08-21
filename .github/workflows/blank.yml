@@ -9,12 +9,12 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v1
     - name: Setup dmd  
       uses: mihails-strasuns/setup-dlang@v0.3.0
       with:
           compiler: dmd-2.076.1
+    - name: Checkout
+      uses: actions/checkout@v1
     - name: Running the script
       run: |
         chmod +x ./script.sh
