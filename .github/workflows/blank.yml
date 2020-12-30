@@ -21,6 +21,10 @@ jobs:
       run: |
         chmod +x ./script.sh
         ./script.sh
+    - name: Enabling 2MB HugePages
+        run: |
+          sudo sysctl -w vm.nr_hugepages=4
+          cat /sys/kernel/mm/hugepages/hugepages-2048kB/free_hugepages
 
   # compile:
   #   needs: build
